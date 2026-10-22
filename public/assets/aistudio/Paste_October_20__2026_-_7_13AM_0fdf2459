@@ -1,0 +1,1334 @@
+MASTER WEBSITE DESA GIRIMUKTI
+Salin seluruh prompt berikut ke AI coding tool yang Anda gunakan.
+1. Identitas dan tujuan proyek
+Anda adalah tim pengembang perangkat lunak profesional yang terdiri dari Senior Full-Stack Developer, Software Architect, UI/UX Designer, Database Engineer, Cybersecurity Engineer, SEO Specialist, DevOps Engineer, dan konsultan Sistem Informasi Desa Indonesia.
+
+Tugas Anda adalah membangun sebuah website sekaligus Sistem Informasi Desa yang lengkap, modern, aman, cepat, mudah digunakan, dan siap diterapkan untuk:
+
+Nama proyek: Website dan Sistem Informasi Desa Girimukti
+
+Identitas pemerintahan:
+- Desa: Girimukti
+- Kecamatan: Cimarga
+- Kabupaten: Lebak
+- Provinsi: Banten
+- Negara: Indonesia
+- Bahasa utama: Bahasa Indonesia
+- Zona waktu: Asia/Jakarta
+- Mata uang: Rupiah (IDR)
+- Format tanggal: Indonesia
+- Format angka: Indonesia
+Tujuan utama:
+1. Menyediakan informasi resmi mengenai Desa Girimukti.
+2. Meningkatkan transparansi penyelenggaraan pemerintahan desa.
+3. Mempermudah masyarakat memperoleh informasi dan pelayanan administrasi.
+4. Menyediakan layanan pengajuan surat secara online.
+5. Menyajikan informasi APBDes dan realisasi anggaran secara transparan.
+6. Menyediakan layanan pengecekan bansos dan PBB dengan perlindungan data pribadi.
+7. Menyediakan pusat dokumentasi foto dan video kegiatan desa.
+8. Memudahkan perangkat desa mengelola konten, data, dokumen, dan pelayanan.
+9. Mendukung SEO, aksesibilitas, performa, keamanan, dan penggunaan melalui perangkat mobile.
+10. Menyediakan arsitektur yang memungkinkan pengembangan aplikasi Android pada masa mendatang.
+Bangun aplikasi yang benar-benar berfungsi, bukan sekadar template HTML, mockup, prototipe visual, atau dashboard yang berisi data palsu.
+
+Setiap menu, tombol, formulir, filter, pencarian, unggahan, laporan, dan proses administrasi harus terhubung dengan logika aplikasi yang sesuai.
+2. Teknologi yang digunakan
+Gunakan arsitektur modern yang stabil, aman, dan mudah dipelihara.
+Frontend
+Gunakan:
+- Next.js dengan App Router.
+- TypeScript dengan strict mode.
+- Tailwind CSS.
+- Komponen UI yang konsisten dan mudah digunakan.
+- React Hook Form untuk pengelolaan formulir.
+- Zod untuk validasi data.
+- TanStack Table untuk tabel administrasi yang kompleks jika diperlukan.
+- Recharts untuk grafik APBDes dan statistik publik.
+- Lucide Icons untuk ikon.
+- Next.js Metadata API untuk SEO.
+- Dukungan Progressive Web App apabila sesuai dengan kebutuhan deployment.
+Gunakan Server Components untuk halaman yang sesuai dan Client Components hanya ketika diperlukan.
+
+Utamakan rendering di server untuk halaman informasi publik agar SEO dan performa optimal.
+Backend
+Gunakan:
+- API berbasis Next.js Route Handlers atau arsitektur backend terpisah apabila memang diperlukan.
+- Node.js LTS yang masih didukung.
+- TypeScript.
+- Prisma ORM atau ORM lain yang stabil.
+- PostgreSQL sebagai basis data utama.
+- Redis hanya jika dibutuhkan untuk caching, antrean, atau pembatasan permintaan berskala lebih besar.
+Backend harus mempunyai pemisahan yang jelas antara logika bisnis, validasi, akses basis data, autentikasi, dan otorisasi.
+
+Jangan menempatkan logika bisnis penting hanya di frontend.
+Penyimpanan file
+Sediakan layanan penyimpanan untuk:
+- Foto profil desa.
+- Foto kegiatan.
+- Video dokumentasi atau tautan video eksternal.
+- Dokumen PDF.
+- Template surat DOCX.
+- Dokumen hasil surat.
+- Lampiran pengaduan.
+- Dokumen pendukung administrasi.
+Gunakan penyimpanan privat untuk dokumen yang memuat data pribadi.
+
+Untuk hosting yang tidak mendukung penyimpanan objek, sediakan alternatif penyimpanan lokal di luar direktori publik dengan izin akses yang benar.
+
+Jangan menyimpan dokumen sensitif dalam folder yang bisa diakses langsung melalui URL publik.
+Infrastruktur
+Siapkan konfigurasi untuk:
+- Deployment VPS Linux.
+- Domain HTTPS.
+- Reverse proxy Nginx.
+- Process manager atau container deployment.
+- Database migration.
+- Backup otomatis.
+- Logging.
+- Monitoring kesehatan aplikasi.
+- Pemulihan dari kegagalan.
+- Pemisahan konfigurasi development dan production.
+Jangan mengasumsikan aplikasi Next.js dapat langsung dijalankan di shared hosting PHP biasa. Dokumentasikan kebutuhan server dan alternatif deployment yang benar.
+3. Desain UI/UX website
+Buat desain website pemerintahan desa yang modern, profesional, bersih, dan mudah dipahami masyarakat.
+Konsep desain
+Gunakan gaya:
+- Modern government portal.
+- Clean interface.
+- Minimalist.
+- Mobile-first.
+- Informatif.
+- Profesional.
+- Cepat dipindai oleh pengunjung.
+- Mudah digunakan masyarakat dari berbagai kelompok usia.
+Warna
+Gunakan palet utama:
+- Navy: #0B3D6E
+- Biru utama: #1E6BB8
+- Biru muda: #60A5FA
+- Latar belakang: #F8FAFC
+- Putih: #FFFFFF
+- Teks utama: #1E293B
+- Teks sekunder: #64748B
+- Garis pembatas: #E2E8F0
+Warna hijau boleh digunakan untuk status keberhasilan, tetapi jangan menjadikannya warna utama seluruh antarmuka.
+Ketentuan desain
+1. Header responsif.
+2. Logo dan nama Desa Girimukti.
+3. Navigasi desktop yang jelas.
+4. Navigasi mobile yang mudah diakses.
+5. Hero section dengan foto asli desa jika tersedia.
+6. Tombol layanan publik yang mudah ditemukan.
+7. Kartu informasi dengan hierarki visual yang konsisten.
+8. Tipografi yang mudah dibaca.
+9. Breadcrumb untuk halaman bertingkat.
+10. Footer berisi identitas pemerintah desa, alamat kantor, kontak resmi, dan tautan penting.
+11. Status loading, empty state, error state, dan success state untuk setiap fitur interaktif.
+12. Kontras warna yang memenuhi prinsip aksesibilitas WCAG.
+13. Tidak menggunakan animasi berlebihan.
+14. Tidak menggunakan carousel otomatis yang mengganggu pembacaan.
+15. Tidak menggunakan data statistik palsu sebagai fakta resmi desa.
+Website harus tetap nyaman digunakan pada ponsel Android dengan koneksi internet lambat.
+4. Struktur halaman publik
+Buat halaman berikut.
+A. Beranda
+URL: /
+
+Beranda harus memuat:
+1. Header identitas Desa Girimukti.
+2. Navigasi utama.
+3. Hero section.
+4. Sambutan Kepala Desa jika teks resminya tersedia.
+5. Profil singkat desa.
+6. Statistik desa berdasarkan data resmi yang telah diverifikasi.
+7. Berita terbaru.
+8. Pengumuman desa.
+9. Agenda kegiatan.
+10. Layanan administrasi online.
+11. Pintasan cek bansos.
+12. Pintasan cek PBB.
+13. Informasi APBDes.
+14. Galeri foto dan video.
+15. Potensi dan produk unggulan desa.
+16. Peta lokasi desa.
+17. Informasi kontak.
+18. Footer resmi.
+Jangan menampilkan angka jumlah penduduk, luas wilayah, jumlah penerima bantuan, atau nominal anggaran yang belum dimasukkan dan diverifikasi oleh administrator.
+
+Jika suatu data belum tersedia, tampilkan keadaan kosong yang informatif.
+B. Profil desa
+URL: /profil
+
+Subhalaman:
+- /profil/sejarah
+- /profil/visi-misi
+- /profil/geografis
+- /profil/demografi
+- /profil/pemerintahan
+- /profil/perangkat-desa
+- /profil/lembaga-desa
+- /profil/potensi
+- /profil/peta
+Fitur:
+- Editor konten.
+- Foto pendukung.
+- Informasi wilayah.
+- Data perangkat desa.
+- Struktur organisasi.
+- Data lembaga desa.
+- Informasi potensi ekonomi, sosial, budaya, dan wisata.
+Sediakan kolom data yang dapat dikonfigurasi sesuai informasi resmi Desa Girimukti.
+C. Berita desa
+URL: /berita
+
+Fitur:
+- Kategori berita.
+- Pencarian.
+- Pagination.
+- Filter tanggal.
+- Berita populer jika statistiknya tersedia.
+- Halaman detail berita.
+- Gambar utama.
+- Penulis.
+- Tanggal publikasi.
+- Waktu pembaruan.
+- Tag.
+- Artikel terkait.
+- Tombol berbagi.
+- Metadata SEO.
+- Sitemap otomatis.
+URL berita harus stabil, misalnya:
+
+/berita/musyawarah-perencanaan-pembangunan-desa
+
+Sediakan status draft, terjadwal, terbit, dan arsip.
+D. Pengumuman desa
+URL: /pengumuman
+
+Fitur:
+- Judul.
+- Isi pengumuman.
+- Tanggal terbit.
+- Masa berlaku.
+- Lampiran PDF.
+- Status aktif atau kedaluwarsa.
+- Penanda pengumuman penting.
+- Pencarian dan filter.
+E. Agenda kegiatan
+URL: /agenda
+
+Fitur:
+- Kalender kegiatan.
+- Detail kegiatan.
+- Tanggal dan waktu.
+- Lokasi.
+- Penyelenggara.
+- Deskripsi.
+- Lampiran.
+- Status kegiatan.
+- Riwayat kegiatan.
+F. Galeri dokumentasi
+URL: /galeri
+
+Subhalaman:
+- /galeri/foto
+- /galeri/video
+- /galeri/detail/[slug]
+Fitur:
+- Album foto.
+- Unggah banyak foto.
+- Caption.
+- Tanggal kegiatan.
+- Kategori.
+- Video YouTube atau platform video lain.
+- Thumbnail video.
+- Optimasi gambar.
+- Lazy loading.
+- Tampilan lightbox.
+- Pagination.
+Untuk foto warga, anak-anak, dan kegiatan yang memuat informasi pribadi, sediakan pengaturan publikasi dan pengelolaan persetujuan sesuai kebutuhan hukum.
+
+Jangan menjadikan unggahan video berukuran besar sebagai alasan memperlambat halaman.
+G. Transparansi dan informasi publik
+URL: /transparansi
+
+Subhalaman:
+- /transparansi/apbdes
+- /transparansi/realisasi
+- /transparansi/dokumen
+- /transparansi/ppid
+- /transparansi/laporan
+Sediakan halaman untuk informasi publik yang dapat diakses sesuai ketentuan keterbukaan informasi.
+
+Dokumen yang dipublikasikan harus melalui proses pemeriksaan sebelum diterbitkan.
+5. Modul informasi APBDes
+Buat modul APBDes yang dapat digunakan untuk menyajikan informasi anggaran desa secara transparan.
+
+URL: /transparansi/apbdes
+Fitur utama
+1. Pemilihan tahun anggaran.
+2. Ringkasan pendapatan.
+3. Ringkasan belanja.
+4. Ringkasan pembiayaan.
+5. Grafik komposisi anggaran.
+6. Tabel rincian anggaran.
+7. Informasi realisasi anggaran.
+8. Persentase realisasi.
+9. Perbandingan anggaran dan realisasi.
+10. Riwayat tahun anggaran.
+11. Unduhan dokumen resmi.
+12. Sumber data dan tanggal pembaruan.
+Struktur data
+Kategori pendapatan, belanja, dan pembiayaan harus mendukung hierarki akun anggaran sesuai dokumen dan klasifikasi resmi yang digunakan pemerintah desa.
+
+Contoh struktur:
+- Pendapatan
+  - Pendapatan asli desa.
+  - Transfer.
+  - Pendapatan lain-lain yang sah.
+- Belanja
+  - Bidang penyelenggaraan pemerintahan desa.
+  - Bidang pelaksanaan pembangunan desa.
+  - Bidang pembinaan kemasyarakatan.
+  - Bidang pemberdayaan masyarakat.
+  - Bidang penanggulangan bencana, keadaan darurat, dan mendesak.
+- Pembiayaan
+  - Penerimaan pembiayaan.
+  - Pengeluaran pembiayaan.
+Struktur final harus mengikuti dokumen anggaran resmi dan ketentuan yang berlaku untuk tahun terkait.
+Pengelolaan data
+Administrator dapat:
+- Membuat tahun anggaran.
+- Menginput data manual.
+- Mengimpor data dari Excel menggunakan template yang terdokumentasi.
+- Memvalidasi format dan total angka.
+- Mengunggah dokumen pendukung.
+- Menyimpan draft.
+- Memublikasikan data setelah disetujui.
+- Mengoreksi data dengan jejak audit.
+- Mengarsipkan tahun anggaran.
+Semua angka harus berasal dari data yang dimasukkan atau diverifikasi oleh petugas berwenang.
+
+Jangan membuat nilai APBDes otomatis atau mengarang angka anggaran.
+6. Modul cek bantuan sosial
+Buat halaman:
+
+/layanan/cek-bansos
+
+Tujuannya adalah membantu warga memperoleh informasi bantuan sosial yang dapat diberikan secara sah oleh pemerintah desa.
+Fitur publik
+Sediakan formulir pencarian dengan mekanisme perlindungan data pribadi.
+
+Jangan membuat halaman yang memungkinkan siapa pun memasukkan nama seseorang lalu melihat seluruh riwayat bantuan orang tersebut.
+
+Jangan menampilkan NIK lengkap atau daftar penerima bantuan beserta data sensitif secara terbuka.
+Pilihan mekanisme verifikasi
+Implementasikan dua mekanisme yang dapat dipilih administrator.
+
+Mekanisme A — Informasi resmi eksternal
+- Tampilkan penjelasan layanan.
+- Sediakan tautan ke layanan resmi pemerintah yang relevan.
+- Berikan petunjuk pengecekan.
+- Jangan meniru tampilan layanan resmi secara menyesatkan.
+- Jangan mengklaim bahwa website desa terhubung ke database nasional jika tidak ada integrasi resmi.
+Mekanisme B — Verifikasi melalui sistem desa
+
+Jika pemerintah desa memiliki dasar pemrosesan data dan kewenangan yang sesuai, sediakan pencarian terbatas dengan ketentuan:
+1. Verifikasi pengguna.
+2. Pembatasan permintaan.
+3. Penggunaan data seminimal mungkin.
+4. Penyembunyian sebagian identitas.
+5. Hasil hanya menampilkan informasi yang boleh diberikan kepada pemohon.
+6. Pencatatan audit akses.
+7. Masa retensi data yang ditetapkan.
+8. Mekanisme koreksi data.
+9. Tidak menampilkan hasil melalui URL yang mudah ditebak.
+10. Tidak memasukkan NIK atau data pribadi ke log aplikasi.
+Jika tidak ada akses resmi ke sumber data bansos, sediakan status informasi dan mekanisme konsultasi kepada petugas desa.
+
+Jangan mengarang status penerima bantuan.
+7. Modul cek PBB
+Buat halaman:
+
+/layanan/cek-pbb
+
+Modul ini digunakan untuk membantu masyarakat memperoleh informasi PBB-P2 sesuai kewenangan pemerintah daerah dan akses yang tersedia.
+Fitur
+- Petunjuk pengecekan PBB.
+- Informasi kontak petugas yang berwenang.
+- Tautan layanan resmi apabila tersedia.
+- Pengajuan permintaan informasi.
+- Riwayat permintaan yang dapat dilihat pemohon.
+- Status permintaan.
+- Notifikasi status jika fitur notifikasi diaktifkan.
+Jika integrasi dengan sistem PBB pemerintah daerah tersedia secara resmi, siapkan adapter integrasi API yang aman.
+
+Jangan membuat klaim integrasi dengan Bapenda Kabupaten Lebak tanpa bukti akses resmi.
+
+Jika belum ada API, sediakan mekanisme permintaan informasi yang diproses petugas berwenang.
+Keamanan
+- Jangan menyediakan pencarian massal NOP.
+- Jangan menampilkan informasi objek pajak milik orang lain tanpa dasar yang sah.
+- Jangan menyimpan data yang tidak diperlukan.
+- Lindungi dokumen pajak dari akses publik.
+- Jangan membuat bukti pembayaran palsu.
+- Jangan menandai tagihan sebagai lunas tanpa konfirmasi dari sumber yang berwenang.
+8. Modul pengajuan surat online berbasis DOCX
+Ini adalah salah satu fitur terpenting.
+
+Buat halaman:
+
+/layanan/surat-online
+
+Masyarakat dapat mengajukan permohonan surat secara online, sementara operator desa dapat membuat jenis surat baru hanya dengan mengunggah template Word atau DOCX dan mengatur placeholder.
+
+Gunakan library Node.js yang sesuai, seperti Docxtemplater, dengan mekanisme validasi template dan penanganan kesalahan yang baik.
+A. Dashboard pengelolaan jenis surat
+URL: /admin/surat/template
+
+Administrator dapat:
+1. Membuat jenis surat baru.
+2. Mengunggah template DOCX.
+3. Menambahkan nama jenis surat.
+4. Menentukan deskripsi.
+5. Mengatur persyaratan.
+6. Mengaktifkan atau menonaktifkan jenis surat.
+7. Mengatur apakah surat dapat diajukan publik atau hanya melalui petugas.
+8. Mengatur nomor surat.
+9. Mengatur format keluaran.
+10. Melakukan preview hasil.
+11. Menguji placeholder.
+12. Mengganti template tanpa menghilangkan riwayat surat lama.
+Contoh jenis surat:
+- Surat Keterangan Domisili.
+- Surat Keterangan Usaha.
+- Surat Keterangan Tidak Mampu.
+- Surat Pengantar.
+- Surat Keterangan Kelahiran.
+- Surat Keterangan Kematian.
+- Surat Keterangan Pindah.
+- Surat Keterangan Umum.
+- Jenis surat lain sesuai kewenangan dan kebutuhan desa.
+Jenis surat dan persyaratan akhirnya harus ditetapkan berdasarkan ketentuan yang berlaku, bukan dianggap otomatis sah hanya karena tersedia dalam aplikasi.
+B. Sistem placeholder
+Template DOCX menggunakan placeholder dengan format yang mudah dipahami operator.
+
+Contoh isi template:
+
+SURAT KETERANGAN USAHA
+
+Nomor: {{nomor_surat}}
+
+Yang bertanda tangan di bawah ini, Kepala Desa Girimukti, Kecamatan Cimarga, Kabupaten Lebak, menerangkan bahwa:
+
+Nama: {{nama}}
+
+NIK: {{nik}}
+
+Tempat/Tanggal Lahir: {{tempat_tanggal_lahir}}
+
+Jenis Kelamin: {{jenis_kelamin}}
+
+Alamat: {{alamat}}
+
+Jenis Usaha: {{jenis_usaha}}
+
+Alamat Usaha: {{alamat_usaha}}
+
+Demikian surat keterangan ini dibuat untuk dipergunakan sebagaimana mestinya.
+
+Girimukti, {{tanggal_surat}}
+
+{{jabatan_penandatangan}}
+
+{{nama_penandatangan}}
+
+Gunakan format placeholder yang konsisten, misalnya {{nama}}.
+
+Jika dibutuhkan untuk kompatibilitas dengan dokumen lama, sediakan opsi placeholder alternatif $nama, $nik, dan $alamat.
+
+Namun, jangan menggunakan penggantian teks mentah yang berisiko mengubah bagian dokumen yang tidak dimaksudkan.
+
+Gunakan parser atau mekanisme penggantian placeholder yang memahami struktur dokumen DOCX.
+C. Deteksi placeholder otomatis
+Ketika operator mengunggah file DOCX, sistem harus:
+1. Memvalidasi format file.
+2. Memastikan dokumen dapat dibaca.
+3. Mendeteksi placeholder yang digunakan.
+4. Menampilkan daftar placeholder.
+5. Memungkinkan operator memberi label setiap placeholder.
+6. Memetakan placeholder ke kolom formulir.
+7. Menandai placeholder yang tidak dikenal.
+8. Memeriksa placeholder wajib.
+9. Menyediakan preview dokumen hasil.
+10. Menolak template yang tidak valid dengan pesan kesalahan yang jelas.
+Contoh:
+Placeholder	Label formulir	Jenis data
+{{nama}}	Nama lengkap	Teks
+{{nik}}	NIK	Identitas
+{{alamat}}	Alamat	Teks
+{{tempat_lahir}}	Tempat lahir	Teks
+{{tanggal_lahir}}	Tanggal lahir	Tanggal
+{{jenis_usaha}}	Jenis usaha	Teks
+{{tanggal_surat}}	Tanggal surat	Tanggal
+{{nomor_surat}}	Nomor surat	Nomor otomatis
+
+
+Tabel tersebut hanya contoh. Sistem harus membuat pemetaan berdasarkan placeholder yang ditemukan dalam dokumen.
+D. Pembuatan formulir otomatis
+Dari placeholder yang telah dipetakan, sistem secara otomatis membuat formulir pengajuan.
+
+Operator dapat menentukan:
+- Label.
+- Jenis input.
+- Wajib atau opsional.
+- Panjang minimum dan maksimum.
+- Format data.
+- Pilihan dropdown.
+- Petunjuk pengisian.
+- Nilai default yang aman.
+- Apakah kolom bersifat sensitif.
+Sediakan jenis input:
+- Teks.
+- Textarea.
+- Angka.
+- Tanggal.
+- Pilihan.
+- Checkbox.
+- Email.
+- Nomor telepon.
+- Unggah dokumen.
+Validasi harus dilakukan di server, bukan hanya di browser.
+E. Alur pengajuan surat
+Implementasikan alur berikut:
+1. Pemohon memilih jenis surat.
+2. Sistem menampilkan persyaratan.
+3. Pemohon mengisi formulir.
+4. Pemohon mengunggah dokumen pendukung jika diperlukan.
+5. Sistem memvalidasi data.
+6. Sistem menyimpan permohonan.
+7. Sistem memberikan nomor registrasi.
+8. Operator memeriksa permohonan.
+9. Operator meminta perbaikan jika diperlukan.
+10. Pemohon menerima informasi status.
+11. Operator menyetujui atau menolak permohonan dengan alasan yang jelas.
+12. Jika disetujui, sistem menghasilkan dokumen dari template DOCX.
+13. Operator memeriksa dokumen akhir.
+14. Pejabat berwenang menandatangani sesuai prosedur.
+15. Dokumen diterbitkan atau diserahkan kepada pemohon melalui mekanisme aman.
+16. Sistem menyimpan riwayat proses.
+Status permohonan:
+- Diajukan.
+- Menunggu verifikasi.
+- Perlu perbaikan.
+- Sedang diproses.
+- Menunggu persetujuan.
+- Disetujui.
+- Selesai.
+- Ditolak.
+- Dibatalkan.
+F. Nomor surat otomatis
+Buat sistem penomoran surat yang dapat dikonfigurasi.
+
+Fitur:
+- Format nomor surat.
+- Kode jenis surat.
+- Tahun.
+- Nomor urut.
+- Reset nomor berdasarkan periode sesuai aturan.
+- Pencegahan nomor ganda.
+- Transaksi database untuk alokasi nomor.
+- Riwayat perubahan.
+- Penguncian nomor surat setelah diterbitkan jika diperlukan.
+Jangan mengasumsikan satu format penomoran cocok untuk semua jenis surat.
+G. Keluaran dokumen
+Sediakan:
+- DOCX hasil pengisian.
+- PDF jika fitur konversi tersedia.
+- Preview sebelum penerbitan.
+- QR code untuk verifikasi dokumen jika diperlukan.
+- Halaman validasi dokumen.
+- Riwayat penerbitan.
+Jika menggunakan QR code, URL verifikasi harus memakai token acak yang tidak mengungkapkan NIK atau data pribadi.
+
+Halaman verifikasi publik hanya menampilkan informasi minimum yang memang layak dipublikasikan, misalnya nomor dokumen yang telah disamarkan, jenis dokumen, tanggal penerbitan, dan status validitas.
+
+Penting: QR code dan dokumen PDF yang dihasilkan tidak otomatis merupakan tanda tangan elektronik yang sah. Sediakan integrasi penandatanganan elektronik hanya apabila menggunakan layanan dan prosedur yang sesuai ketentuan.
+H. Keamanan pengelolaan template
+- Batasi unggahan hanya pada tipe file yang diperlukan.
+- Validasi ukuran file.
+- Validasi struktur DOCX.
+- Terapkan batas pemrosesan.
+- Jangan menjalankan macro.
+- Jangan membuka tautan eksternal yang tertanam dalam dokumen.
+- Batasi akses template.
+- Simpan versi template.
+- Catat perubahan konfigurasi.
+- Jangan membiarkan placeholder digunakan untuk menyisipkan konten HTML atau kode program.
+- Gunakan escaping yang sesuai saat memasukkan data ke dokumen.
+9. Modul dashboard administrasi desa
+Buat dashboard administrator pada:
+
+/admin
+
+Dashboard harus memiliki antarmuka yang terpisah dari halaman publik.
+Ringkasan dashboard
+Tampilkan:
+- Jumlah berita.
+- Jumlah pengumuman.
+- Agenda mendatang.
+- Jumlah permohonan surat.
+- Permohonan yang belum diproses.
+- Permohonan yang perlu perbaikan.
+- Jumlah template surat aktif.
+- Dokumen yang perlu ditinjau.
+- Ringkasan statistik layanan.
+- Aktivitas administrasi terbaru.
+Semua angka harus berasal dari database aktual.
+Modul pengelolaan
+Sediakan menu:
+1. Dashboard.
+2. Profil desa.
+3. Berita.
+4. Kategori berita.
+5. Pengumuman.
+6. Agenda.
+7. Galeri.
+8. Data perangkat desa.
+9. Data lembaga desa.
+10. APBDes.
+11. Realisasi anggaran.
+12. Dokumen publik.
+13. PPID.
+14. Pengajuan surat.
+15. Template surat.
+16. Data layanan bansos.
+17. Data layanan PBB.
+18. Pengaduan masyarakat.
+19. Statistik website.
+20. Pengguna admin.
+21. Hak akses.
+22. Audit log.
+23. Pengaturan website.
+24. Pengaturan SEO.
+25. Backup dan pemulihan.
+Menu terkait data sensitif hanya boleh diakses oleh pengguna yang mempunyai kewenangan sesuai konfigurasi sistem.
+10. Sistem autentikasi dan hak akses
+Bangun sistem autentikasi yang aman.
+Peran pengguna
+Minimal sediakan:
+
+1. Administrator Sistem
+- Mengelola konfigurasi teknis.
+- Mengelola akun dan hak akses.
+- Mengelola pengaturan aplikasi.
+- Melihat audit log.
+- Tidak otomatis berhak melihat seluruh data pribadi warga tanpa alasan kewenangan.
+2. Operator Desa
+- Mengelola berita.
+- Mengelola pengumuman.
+- Mengelola galeri.
+- Mengelola dokumen.
+- Memeriksa permohonan surat sesuai penugasan.
+3. Petugas Pelayanan
+- Memeriksa permohonan yang ditugaskan.
+- Meminta perbaikan.
+- Memperbarui status.
+- Menghasilkan dokumen sesuai hak akses.
+4. Pengelola Keuangan
+- Menginput data APBDes.
+- Mengelola realisasi.
+- Mengunggah dokumen keuangan.
+- Menyiapkan publikasi untuk disetujui.
+5. Pejabat Penyetuju
+- Memeriksa dan menyetujui dokumen atau publikasi tertentu.
+- Tidak otomatis memperoleh akses penuh ke seluruh modul.
+6. Auditor atau Pemeriksa
+- Melihat data dan riwayat sesuai ruang lingkup kewenangan.
+- Tidak dapat mengubah data jika hanya diberikan akses baca.
+Sistem harus mendukung konfigurasi hak akses yang lebih rinci jika diperlukan.
+Keamanan autentikasi
+Implementasikan:
+- Password hashing menggunakan Argon2id atau algoritma yang setara.
+- Session management yang aman.
+- Cookie HttpOnly, Secure, dan SameSite.
+- Proteksi brute force.
+- Rate limiting.
+- Validasi sesi di server.
+- Reset password dengan token sekali pakai.
+- Pengelolaan sesi aktif.
+- Logout.
+- Kebijakan kata sandi.
+- MFA untuk akun dengan hak akses tinggi jika memungkinkan.
+Jangan menyimpan password dalam bentuk plaintext.
+
+Jangan menyimpan secret API dalam kode frontend atau repository.
+11. Modul pengaduan masyarakat
+Buat halaman:
+
+/layanan/pengaduan
+
+Fitur:
+- Formulir pengaduan.
+- Kategori pengaduan.
+- Judul dan deskripsi.
+- Lokasi kejadian.
+- Lampiran foto atau dokumen.
+- Nomor tiket.
+- Status penanganan.
+- Tanggal pengajuan.
+- Riwayat tindak lanjut.
+- Balasan petugas.
+- Penutupan laporan.
+Status:
+- Diterima.
+- Diverifikasi.
+- Diproses.
+- Menunggu informasi.
+- Selesai.
+- Ditolak dengan alasan.
+Sediakan opsi pengaduan yang identitasnya tidak ditampilkan secara publik jika sesuai kebijakan.
+
+Jangan mempublikasikan identitas pelapor, alamat pribadi, nomor telepon, atau lampiran sensitif.
+
+Untuk pengecekan status, gunakan token acak atau mekanisme autentikasi yang aman.
+12. Modul PPID dan keterbukaan informasi publik
+Buat halaman:
+
+/transparansi/ppid
+
+Fitur:
+- Profil layanan informasi.
+- Daftar informasi berkala.
+- Daftar informasi serta-merta.
+- Daftar informasi setiap saat.
+- Dokumen publik.
+- Formulir permintaan informasi.
+- Nomor registrasi.
+- Status permintaan.
+- Tanggal penerimaan.
+- Tanggal tanggapan.
+- Informasi prosedur keberatan.
+- Arsip jawaban.
+Sediakan proses klasifikasi dokumen sebelum dipublikasikan.
+
+Informasi yang dikecualikan tidak boleh dipublikasikan hanya karena sudah diunggah oleh operator.
+
+Sediakan mekanisme penyamaran data pribadi dalam dokumen yang perlu dipublikasikan sebagian.
+
+Proses permintaan informasi harus mendukung pencatatan tanggal dan tenggat berdasarkan ketentuan yang berlaku.
+13. Modul pencarian website
+Buat pencarian global untuk informasi publik.
+
+Pengunjung dapat mencari:
+- Berita.
+- Pengumuman.
+- Agenda.
+- Artikel profil.
+- Dokumen publik.
+- Informasi APBDes.
+- Galeri.
+Ketentuan:
+- Hasil pencarian relevan.
+- Mendukung kata kunci bahasa Indonesia.
+- Memiliki pagination.
+- Memiliki filter kategori.
+- Memiliki tampilan kosong yang informatif.
+- Tidak memasukkan data pribadi warga dalam indeks pencarian.
+- Tidak mengindeks halaman admin.
+- Tidak mengindeks halaman yang memerlukan autentikasi.
+Pencarian harus menggunakan indeks data publik yang telah diizinkan untuk ditampilkan.
+14. SEO teknis dan SEO lokal
+Bangun sistem SEO yang lengkap untuk meningkatkan visibilitas website Desa Girimukti pada mesin pencari.
+SEO teknis
+Implementasikan:
+- Metadata title.
+- Meta description.
+- Canonical URL.
+- Open Graph.
+- Twitter/X card.
+- Sitemap XML.
+- Robots.txt.
+- Breadcrumb.
+- URL yang mudah dibaca.
+- Internal linking.
+- Pagination yang benar.
+- Metadata gambar.
+- Redirect untuk perubahan slug.
+- Halaman 404.
+- Halaman error yang ramah pengguna.
+- Structured data JSON-LD yang sesuai.
+Gunakan structured data yang benar-benar relevan, seperti Organization, GovernmentOrganization apabila sesuai, Article, dan BreadcrumbList.
+
+Jangan menambahkan rating, ulasan, alamat, atau informasi organisasi yang tidak benar.
+SEO lokal
+Targetkan pencarian yang relevan secara alami, misalnya:
+- Desa Girimukti Kecamatan Cimarga.
+- Profil Desa Girimukti.
+- Pemerintahan Desa Girimukti.
+- Berita Desa Girimukti.
+- Informasi APBDes Desa Girimukti.
+- Pelayanan administrasi Desa Girimukti.
+- Potensi Desa Girimukti Kabupaten Lebak.
+Jangan melakukan keyword stuffing.
+Konten
+Sediakan fitur SEO pada dashboard:
+- Judul SEO.
+- Deskripsi SEO.
+- Slug.
+- Kata kunci internal.
+- Gambar utama.
+- Alt text gambar.
+- Canonical URL opsional.
+- Preview hasil pencarian.
+Sediakan sitemap terpisah untuk berita dan halaman publik jika bermanfaat.
+
+Halaman administrasi, formulir privat, dan dokumen warga tidak boleh masuk sitemap publik.
+15. Optimasi kecepatan dan performa
+Targetkan performa yang baik pada Core Web Vitals.
+
+Gunakan sasaran berikut sebagai target pengujian, bukan jaminan otomatis:
+- LCP maksimal 2,5 detik.
+- INP maksimal 200 milidetik.
+- CLS maksimal 0,1.
+Optimalkan:
+1. Ukuran JavaScript.
+2. Ukuran CSS.
+3. Gambar.
+4. Font.
+5. Query database.
+6. Rendering server.
+7. Caching halaman publik.
+8. Pagination.
+9. Lazy loading.
+10. Kompresi respons.
+11. Penggunaan CDN bila tersedia.
+12. Pengambilan data yang tidak diperlukan.
+Gunakan format gambar modern seperti WebP atau AVIF jika sesuai.
+
+Sediakan ukuran thumbnail dan gambar utama yang berbeda.
+
+Jangan mengambil seluruh data galeri atau seluruh berita dalam satu permintaan.
+
+Jangan men-cache halaman privat dengan cara yang memungkinkan data satu pengguna terlihat oleh pengguna lain.
+16. Keamanan aplikasi dan perlindungan data
+Keamanan harus menjadi bagian dari arsitektur sejak awal.
+
+Gunakan OWASP Top 10 sebagai salah satu acuan pengujian.
+Proteksi aplikasi
+Implementasikan:
+- Validasi input di server.
+- Proteksi SQL injection melalui query terparameterisasi atau ORM.
+- Proteksi XSS.
+- Proteksi CSRF untuk konteks autentikasi yang memerlukannya.
+- Kebijakan CORS yang ketat.
+- Content Security Policy.
+- Security headers.
+- Rate limiting.
+- Pembatasan ukuran request.
+- Validasi unggahan file.
+- Pencegahan akses file tanpa izin.
+- Pencegahan IDOR.
+- Otorisasi setiap operasi sensitif.
+- Penanganan error tanpa membocorkan detail internal.
+- Audit log.
+- Pemisahan environment variable.
+- Rotasi secret.
+- Backup terenkripsi untuk data sensitif.
+- Pemulihan database yang diuji.
+Perlindungan data pribadi
+Rancang sistem dengan memperhatikan UU Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi serta ketentuan relevan lainnya yang berlaku.
+
+Terapkan:
+- Pengumpulan data minimum.
+- Pembatasan tujuan penggunaan data.
+- Pengaturan hak akses.
+- Retensi dan penghapusan data.
+- Pengamanan dokumen.
+- Pencatatan akses yang relevan.
+- Mekanisme koreksi data.
+- Prosedur penanganan insiden.
+- Perlindungan data pribadi sejak desain.
+Jangan menganggap persetujuan pengguna sebagai satu-satunya dasar pemrosesan untuk semua kegiatan pemerintahan. Dasar pemrosesan harus ditentukan berdasarkan tujuan, kewenangan, dan ketentuan yang relevan.
+
+Jangan menyimpan NIK, kata sandi, token, atau data sensitif di log aplikasi.
+17. Standar peraturan pemerintahan
+Rancang website agar mendukung kebutuhan informasi dan administrasi pemerintahan desa.
+
+Gunakan peraturan berikut sebagai daftar awal untuk pemeriksaan kesesuaian:
+1. UU Nomor 6 Tahun 2014 tentang Desa beserta perubahan yang berlaku, termasuk UU Nomor 3 Tahun 2024.
+2. UU Nomor 14 Tahun 2008 tentang Keterbukaan Informasi Publik.
+3. UU Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi.
+4. UU Nomor 1 Tahun 2024 tentang perubahan kedua atas UU ITE.
+5. PP Nomor 71 Tahun 2019 tentang Penyelenggaraan Sistem dan Transaksi Elektronik.
+6. Perpres Nomor 95 Tahun 2018 tentang Sistem Pemerintahan Berbasis Elektronik, dengan penerapan sesuai ruang lingkup yang relevan.
+7. Permendagri Nomor 20 Tahun 2018 tentang Pengelolaan Keuangan Desa.
+8. Ketentuan pengelolaan informasi publik yang berlaku.
+9. Ketentuan tata naskah dinas dan administrasi pemerintahan desa yang relevan.
+10. Ketentuan penyelenggaraan sistem elektronik dan keamanan yang berlaku untuk pengelola sistem.
+Penting: Daftar tersebut bukan pernyataan bahwa semua ketentuan masih berlaku tanpa perubahan atau otomatis berlaku dengan cara yang sama untuk setiap fitur.
+
+Sebelum implementasi final, lakukan pemeriksaan terhadap peraturan terbaru, peraturan pelaksana, ketentuan Kabupaten Lebak, serta standar teknis yang relevan.
+
+Buat matriks kepatuhan yang berisi:
+- Nama peraturan.
+- Pasal atau ketentuan yang relevan.
+- Modul yang terdampak.
+- Kebutuhan teknis.
+- Prosedur operasional.
+- Bukti pemenuhan.
+- Status implementasi.
+- Catatan yang memerlukan pemeriksaan hukum.
+Jangan mengklaim website telah tersertifikasi atau sepenuhnya memenuhi seluruh peraturan hanya berdasarkan tersedianya fitur.
+18. Pengaturan website melalui dashboard
+Buat halaman pengaturan agar administrator dapat mengelola website tanpa mengubah kode program.
+
+Pengaturan meliputi:
+Identitas desa
+- Nama desa.
+- Kecamatan.
+- Kabupaten.
+- Provinsi.
+- Logo desa.
+- Alamat kantor.
+- Nomor telepon.
+- Email resmi.
+- Jam pelayanan.
+- Koordinat peta.
+Tampilan
+- Logo.
+- Favicon.
+- Warna utama.
+- Foto hero.
+- Footer.
+- Menu navigasi.
+- Informasi kontak.
+SEO
+- Judul website.
+- Deskripsi website.
+- Gambar Open Graph.
+- Sitemap.
+- Robots.
+- Kode verifikasi Search Console.
+- Metadata default.
+Pelayanan
+- Jenis surat aktif.
+- Persyaratan surat.
+- Jam pelayanan.
+- Kontak petugas.
+- Pengaturan notifikasi.
+- Informasi layanan bansos.
+- Informasi layanan PBB.
+Sistem
+- Status pemeliharaan.
+- Pengaturan keamanan.
+- Retensi data.
+- Backup.
+- Audit log.
+- Pengaturan email.
+- Pengaturan integrasi.
+Semua pengaturan yang berisiko terhadap keamanan harus dibatasi pada pengguna yang mempunyai kewenangan sesuai.
+19. Struktur database
+Rancang database relasional yang konsisten, ternormalisasi, dan memiliki relasi yang jelas.
+
+Minimal sediakan tabel atau model berikut:
+Identitas dan autentikasi
+- users
+- roles
+- permissions
+- user_roles
+- role_permissions
+- sessions
+- password_reset_tokens
+Konten
+- site_settings
+- pages
+- news
+- news_categories
+- news_tags
+- news_tag_relations
+- announcements
+- events
+- gallery_albums
+- gallery_items
+- village_officials
+- village_institutions
+Keuangan
+- fiscal_years
+- budget_accounts
+- budget_entries
+- budget_realizations
+- financial_documents
+- financial_publications
+Surat online
+- letter_types
+- letter_templates
+- letter_template_versions
+- letter_template_fields
+- letter_applications
+- letter_application_values
+- letter_attachments
+- letter_reviews
+- letter_number_sequences
+- issued_letters
+- document_verification_tokens
+Layanan publik
+- service_requests
+- complaints
+- complaint_updates
+- public_information_requests
+- public_information_responses
+- bansos_service_requests
+- pbb_service_requests
+Sistem
+- audit_logs
+- notifications
+- file_metadata
+- backup_logs
+- system_health_logs
+Struktur tersebut adalah rancangan awal. Tambahkan atau sesuaikan tabel berdasarkan kebutuhan nyata dan hasil desain domain.
+
+Setiap tabel harus memiliki tipe data, primary key, foreign key, indeks, aturan penghapusan, dan timestamp yang sesuai.
+
+Gunakan transaksi database untuk operasi yang memerlukan konsistensi, terutama penomoran surat dan penerbitan dokumen.
+
+Jangan membuat satu tabel raksasa yang mencampurkan seluruh data aplikasi.
+20. Notifikasi dan komunikasi
+Sediakan sistem notifikasi untuk:
+- Pengajuan surat berhasil.
+- Permohonan perlu diperbaiki.
+- Permohonan disetujui.
+- Surat selesai.
+- Pengaduan diterima.
+- Pengaduan diperbarui.
+- Permintaan informasi diterima.
+- Pengumuman penting.
+Kanal notifikasi dapat meliputi:
+- Notifikasi di dalam aplikasi.
+- Email.
+- WhatsApp melalui penyedia API resmi jika tersedia.
+Jika integrasi WhatsApp belum dikonfigurasi, tampilkan status bahwa layanan belum aktif.
+
+Jangan berpura-pura mengirim pesan jika provider belum tersedia.
+
+Sediakan konfigurasi template pesan dan log pengiriman tanpa menyimpan data sensitif secara berlebihan.
+21. Peta digital dan informasi geografis
+Buat halaman:
+
+/profil/peta
+
+Fitur:
+- Peta lokasi Desa Girimukti.
+- Penanda kantor desa.
+- Informasi alamat.
+- Tautan navigasi.
+- Informasi batas wilayah jika tersedia.
+- Titik fasilitas umum jika data resmi tersedia.
+Gunakan layanan peta yang lisensi dan ketentuan penggunaannya sesuai.
+
+Jangan mengarang batas administrasi desa atau koordinat wilayah.
+
+Jika tersedia data GeoJSON atau shapefile resmi, sediakan mekanisme impor untuk menampilkan wilayah secara akurat.
+22. Dokumentasi teknis
+Buat dokumentasi lengkap agar aplikasi dapat dipasang dan dikelola oleh tim teknis lain.
+
+Minimal sertakan:
+1. README.md
+2. ARCHITECTURE.md
+3. DATABASE.md
+4. SECURITY.md
+5. DEPLOYMENT.md
+6. BACKUP-RESTORE.md
+7. SEO.md
+8. COMPLIANCE-MATRIX.md
+9. API.md
+10. USER-MANUAL-ADMIN.md
+11. USER-MANUAL-PEMOHON.md
+12. .env.example
+13. Database migration.
+14. Seed data yang aman.
+15. Template DOCX contoh.
+16. Template impor APBDes.
+17. Contoh konfigurasi Nginx.
+18. Panduan pembaruan aplikasi.
+19. Panduan pemulihan saat terjadi kegagalan.
+Dokumentasi harus sesuai dengan implementasi sebenarnya.
+
+Jangan menulis instruksi yang bergantung pada file, perintah, atau fitur yang tidak dibuat.
+23. Pengujian otomatis dan manual
+Buat pengujian sebelum menyatakan aplikasi siap digunakan.
+Unit testing
+Uji:
+- Validasi formulir.
+- Hak akses.
+- Penghitungan APBDes.
+- Validasi template surat.
+- Pemetaan placeholder.
+- Penomoran surat.
+- Validasi dokumen.
+- Status permohonan.
+Integration testing
+Uji:
+- Login.
+- Pembuatan berita.
+- Publikasi berita.
+- Unggah DOCX.
+- Pembuatan formulir dinamis.
+- Pengajuan surat.
+- Verifikasi surat.
+- Pengelolaan APBDes.
+- Impor Excel.
+- Pengajuan pengaduan.
+- Permintaan informasi publik.
+End-to-end testing
+Gunakan Playwright atau alat yang setara.
+
+Uji alur:
+1. Operator login.
+2. Operator mengunggah template surat.
+3. Sistem mendeteksi placeholder.
+4. Operator memetakan formulir.
+5. Pemohon mengajukan surat.
+6. Operator memverifikasi permohonan.
+7. Sistem menghasilkan DOCX.
+8. Operator memeriksa hasil.
+9. Dokumen disetujui dan diterbitkan.
+10. Pemohon menerima dokumen melalui mekanisme aman.
+11. QR code dapat memvalidasi status dokumen tanpa membuka data pribadi.
+Pengujian keamanan
+Uji:
+- Akses tanpa login.
+- Eskalasi hak akses.
+- Akses lintas pengguna.
+- Manipulasi parameter ID.
+- Unggahan file berbahaya.
+- SQL injection.
+- XSS.
+- CSRF.
+- Brute force.
+- Kebocoran dokumen.
+- Kebocoran data pada log.
+- Penyalahgunaan endpoint pencarian.
+- Penyalahgunaan endpoint verifikasi.
+Pengujian performa
+Uji:
+- Halaman beranda.
+- Halaman berita.
+- Galeri.
+- Dashboard admin.
+- Pencarian.
+- Endpoint pelayanan.
+- Query APBDes.
+- Penggunaan pada perangkat mobile.
+Jangan menyatakan aplikasi aman hanya karena tidak ditemukan kesalahan dalam pengujian dasar.
+24. Data awal dan konfigurasi produksi
+Buat seed data untuk kebutuhan pengembangan, tetapi jangan mencampurkannya dengan data produksi.
+
+Data awal yang boleh digunakan:
+- Identitas Desa Girimukti.
+- Menu website.
+- Kategori berita.
+- Jenis modul layanan.
+- Struktur kategori APBDes.
+- Contoh template surat.
+- Contoh akun untuk lingkungan development.
+Gunakan data contoh yang jelas ditandai sebagai data simulasi.
+
+Jangan membuat nama pejabat, NIK, jumlah penduduk, jumlah penerima bansos, anggaran desa, atau informasi PBB fiktif lalu menampilkannya sebagai fakta.
+
+Untuk akun administrator awal:
+- Sediakan proses bootstrap yang aman.
+- Minta administrator menetapkan kredensial awal.
+- Jangan menyimpan password default di source code.
+- Jangan menyediakan akun admin publik dengan password yang mudah ditebak.
+- Nonaktifkan proses bootstrap setelah instalasi selesai.
+Sebelum produksi, semua identitas pejabat, kontak resmi, dokumen, dan informasi pemerintahan harus diperiksa serta disahkan oleh pihak yang berwenang.
+25. Kriteria penerimaan proyek
+Website hanya dapat dinyatakan siap digunakan setelah kriteria berikut terpenuhi.
+Fungsionalitas
+- Seluruh halaman publik berfungsi.
+- Dashboard admin berfungsi.
+- CRUD konten berjalan.
+- Pencarian berjalan.
+- Modul APBDes bekerja dengan data aktual.
+- Modul layanan bansos memiliki mekanisme yang jelas dan tidak mengarang hasil.
+- Modul PBB memiliki mekanisme yang jelas dan tidak mengarang status pembayaran.
+- Template DOCX dapat diunggah.
+- Placeholder dapat dideteksi.
+- Formulir dapat dibuat otomatis.
+- Pengajuan surat dapat diproses sampai selesai.
+- Dokumen hasil dapat diunduh oleh pihak yang berhak.
+- QR code berfungsi jika fitur diaktifkan.
+- Audit log mencatat aktivitas penting.
+- Backup dan pemulihan telah diuji.
+SEO dan performa
+- Metadata tersedia.
+- Sitemap valid.
+- Robots.txt benar.
+- Canonical URL sesuai.
+- Halaman mobile responsif.
+- Gambar dioptimalkan.
+- Tidak ada tautan internal penting yang rusak.
+- Tidak ada halaman privat yang terindeks.
+- Target Core Web Vitals diuji.
+Keamanan
+- Tidak ada password plaintext.
+- Hak akses diuji.
+- File privat tidak dapat diakses tanpa izin.
+- Input divalidasi.
+- Secret tidak tersimpan dalam repository.
+- HTTPS dikonfigurasi.
+- Backup tersedia.
+- Pemulihan diuji.
+- Audit log tersedia.
+- Prosedur penanganan insiden didokumentasikan.
+Operasional
+- Aplikasi dapat dipasang pada server target.
+- Database migration berhasil.
+- Dokumentasi deployment tersedia.
+- Administrator dapat mengelola konten tanpa mengubah kode.
+- Operator dapat mengelola template surat tanpa mengubah kode.
+- Tidak ada tombol penting yang hanya berupa tampilan.
+- Tidak ada endpoint penting yang belum diimplementasikan.
+- Tidak ada integrasi eksternal palsu.
+- Tidak ada data simulasi yang tersaji sebagai data resmi.
+26. Cara AI harus mengerjakan proyek
+Ikuti tahapan berikut secara berurutan.
+
+Tahap 1 — Analisis dan arsitektur
+- Identifikasi kebutuhan.
+- Tentukan arsitektur.
+- Rancang struktur database.
+- Tentukan alur pengguna.
+- Tentukan batas akses data.
+- Susun daftar modul.
+- Susun rencana pengujian.
+Tahap 2 — Fondasi aplikasi
+- Buat struktur proyek.
+- Konfigurasikan TypeScript.
+- Konfigurasikan database.
+- Buat migration.
+- Buat autentikasi.
+- Buat otorisasi.
+- Buat layout publik.
+- Buat layout admin.
+Tahap 3 — Portal publik
+- Profil desa.
+- Berita.
+- Pengumuman.
+- Agenda.
+- Galeri.
+- Transparansi.
+- Peta.
+- SEO.
+Tahap 4 — Layanan digital
+- Pengajuan surat.
+- Pengelolaan template DOCX.
+- Formulir dinamis.
+- Penomoran surat.
+- Pembuatan dokumen.
+- Verifikasi dokumen.
+- Pengaduan.
+- PPID.
+- Layanan bansos.
+- Layanan PBB.
+Tahap 5 — Dashboard administrasi
+- Pengelolaan konten.
+- Pengelolaan dokumen.
+- Pengelolaan APBDes.
+- Hak akses.
+- Audit log.
+- Pengaturan website.
+Tahap 6 — Pengujian
+- Unit testing.
+- Integration testing.
+- End-to-end testing.
+- Security testing.
+- Performance testing.
+Tahap 7 — Deployment
+- Konfigurasi production.
+- HTTPS.
+- Migrasi database.
+- Backup.
+- Monitoring.
+- Dokumentasi.
+- Uji penerimaan.
+Pada setiap tahap, buat implementasi nyata, jalankan pengujian, perbaiki kesalahan, dan dokumentasikan hasilnya.
+
+Jangan membuat seluruh proyek dalam satu file.
+
+Jangan berhenti setelah menghasilkan desain halaman.
+
+Jangan mengganti implementasi backend dengan array data statis.
+
+Jangan membuat tombol yang tidak mempunyai aksi.
+
+Jangan menyatakan fitur selesai jika baru berupa mockup.
+
+Jika suatu fitur memerlukan API eksternal, kredensial, dokumen resmi, atau persetujuan pihak berwenang, implementasikan antarmukanya, siapkan adapter integrasinya, dokumentasikan kebutuhan tersebut, dan tampilkan status yang jujur sampai integrasi benar-benar tersedia.
+
+Jika terdapat keputusan teknis yang belum ditentukan, pilih solusi yang paling aman, stabil, mudah dipelihara, dan sesuai kebutuhan.
+
+Target akhir: menghasilkan source code lengkap website dan Sistem Informasi Desa Girimukti yang dapat dijalankan, diuji, dikonfigurasi, dan di-deploy pada lingkungan produksi setelah data resmi, akses eksternal, dan persyaratan operasional dilengkapi.
+27. Prompt tambahan untuk memastikan hasilnya benar-benar selesai
+Setelah AI menyelesaikan implementasi awal, kirimkan prompt lanjutan berikut.
+Lakukan audit menyeluruh terhadap proyek Website dan Sistem Informasi Desa Girimukti yang telah Anda buat.
+
+Jangan hanya membaca source code. Jalankan aplikasi, periksa database, jalankan seluruh test, dan periksa alur pengguna.
+
+Buat daftar:
+1. Fitur yang sudah benar-benar berfungsi.
+2. Fitur yang baru berupa tampilan.
+3. Fitur yang belum dibuat.
+4. Fitur yang masih menggunakan data simulasi.
+5. Endpoint yang belum berfungsi.
+6. Kesalahan autentikasi dan otorisasi.
+7. Potensi kebocoran data.
+8. Masalah performa.
+9. Masalah SEO.
+10. Masalah deployment.
+11. Integrasi eksternal yang belum tersedia.
+12. Pengujian yang gagal.
+Kemudian perbaiki masalah yang ditemukan, jalankan kembali pengujian, dan dokumentasikan hasil akhirnya.
+
+Prioritaskan keamanan data pribadi, keakuratan dokumen administrasi, integritas database, dan keandalan pelayanan publik.
+
+Jangan mengklaim proyek siap produksi sebelum kriteria penerimaan terpenuhi. Jika masih ada kendala yang memerlukan akses eksternal atau keputusan pemerintah desa, jelaskan secara spesifik.
+
+Rekomendasi saya untuk implementasi di Desa Girimukti
+Prompt di atas mencakup ruang lingkup yang cukup besar. Agar hasilnya tidak berhenti sebagai website yang bagus secara visual tetapi belum berfungsi, ada beberapa keputusan penting yang sebaiknya ditetapkan sejak awal.
+1. Gunakan satu sistem dengan dua antarmuka
+Pisahkan tampilan menjadi dua bagian:
+Bagian	Fungsi
+Website publik	Informasi desa, berita, APBDes, galeri, profil, dan layanan masyarakat
+Dashboard admin	Pengelolaan konten, dokumen, surat online, keuangan, pengaduan, dan pengaturan
+
+
+Keduanya menggunakan backend dan database yang sama dengan pengaturan akses yang ketat.
+
+Dengan demikian, operator tidak perlu mengelola beberapa aplikasi yang berbeda.
+2. Jadikan generator surat DOCX sebagai fitur unggulan
+Menurut saya, fitur ini akan sangat membantu operasional pemerintah desa.
+
+Operator cukup mengunggah dokumen Word yang sudah disiapkan, misalnya:
+
+surat_keterangan_usaha.docx
+
+Kemudian sistem mendeteksi placeholder seperti:
+- {{nama}}
+- {{nik}}
+- {{alamat}}
+- {{jenis_usaha}}
+- {{tanggal_surat}}
+- {{nomor_surat}}
+Sistem menghasilkan formulir berdasarkan placeholder tersebut.
+
+Jika pemerintah desa membutuhkan jenis surat baru, operator tidak harus meminta programmer mengubah source code. Operator cukup mengunggah template, mengatur pemetaan formulir, lalu menguji hasilnya.
+
+Namun, template harus dirancang dengan benar karena placeholder yang terpecah ke beberapa bagian teks dalam dokumen Word dapat menyebabkan kegagalan penggantian. Fitur preview dan validasi template wajib tersedia.
+3. Jangan langsung membuat database bansos dan PBB tanpa sumber data resmi
+Untuk bansos dan PBB, sebaiknya website menyediakan mekanisme layanan terlebih dahulu.
+
+Setelah akses resmi dan kewenangan pengolahan data dipastikan, barulah integrasi dapat dibuat.
+
+Ini lebih aman daripada membuat fitur pencarian yang tampak bekerja, tetapi sebenarnya hanya mencocokkan data buatan atau membuka informasi pribadi warga.

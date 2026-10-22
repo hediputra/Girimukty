@@ -1,0 +1,6 @@
+{
+  "name": "Website dan Sistem Informasi Desa Girimukti",
+  "description": "Portal Resmi Pemerintah Desa Girimukti, Kecamatan Cimarga, Kabupaten Lebak, Provinsi Banten. Layanan administrasi surat online, transparansi APBDes, informasi publik, PPID, pengaduan warga, dan profil desa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
